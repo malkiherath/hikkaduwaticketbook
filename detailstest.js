@@ -39,7 +39,9 @@ form.addEventListener('submit', e => {
     validateInputs();
     const validInputs = document.querySelectorAll('.input-control.success').length;
     if (validInputs === 4) {
+        
         addtoStorage();
+        window.location.href = './paymenttest.html';
     }
 });
 var response=[];
@@ -72,10 +74,11 @@ const setError = (element, message) => {
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
-
+    
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
+    
 };
 
 const isValidEmail = email => {

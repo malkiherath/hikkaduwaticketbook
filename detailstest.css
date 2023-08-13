@@ -24,7 +24,7 @@
 
 /*ticket page*/
 .inline{
-  padding-left: 100px;
+  padding-left: 0%;
   align-items:flex-start;
 }
 p{
@@ -101,7 +101,7 @@ body{
 
 }
 .inline{
-  display: flex;
+  display: inline-flex;
 background-color: #a2bac6;
   width: 100%;
  
@@ -220,7 +220,7 @@ width: 100%;
 }
 .section{
 align-self: center;
-margin: auto 10%;
+margin: auto 1%;
 }
 
 #continue-button{
