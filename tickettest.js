@@ -1,15 +1,5 @@
 //get elements by id and set selections
-const durationSelect = document.getElementById("duration");
-const selectedOptionsDiv = document.getElementById("selectedOptions");
 
-durationSelect.addEventListener("change", function() {
-const selectedOptions = Array.from(durationSelect.selectedOptions).map(option => option.text);
-selectedOptionsDiv.textContent = selectedOptions.join("</br> ");
-
-const selectedOptionsLength = selectedOptions.length;
-const selectedOptionsCount = durationSelect.selectedOptions.length;
-
-});
 document.addEventListener("DOMContentLoaded", function() {
 const selectedDateInput = document.getElementById("selected-date");
 const ticketsTable = document.getElementById("tickets-table");
@@ -42,7 +32,15 @@ function updateSummary() {
     ["Infant", parseInt(document.getElementById("infant").value)]
     
   ];
-
+  const durationSelect = document.getElementById("duration");
+  const selectedOptionsDiv = document.getElementById("selectedOptions");
+  
+  durationSelect.addEventListener("change", function() {
+  const selectedOptions = Array.from(durationSelect.selectedOptions).map(option => option.text);
+  selectedOptionsDiv.textContent = selectedOptions.join("</br> ");
+  
+  
+  });
   const tableBody = document.getElementById("tickets-table");
   tableBody.innerHTML = "";
 
@@ -81,16 +79,12 @@ function updateSummary() {
   const form={
     date: date,
     ticketData: ticketData,
-    selectedOptions: selectedOptions,
-    selectedOptionsCount: selectedOptionsCount,
     total: total
   };
   localStorage.setItem("form",JSON.stringify(form));
         localStorage.setItem('date',JSON.stringify(date));
-        localStorage.setItem('selectedOptionsCount',JSON.stringify(selectedOptionsCount));
-        localStorage.setItem('ticketData',JSON.stringify(ticketData));
-        localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
         localStorage.setItem('total', JSON.stringify(total));
+        console.log(localStorage);
 }
 
 
