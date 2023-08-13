@@ -13,7 +13,7 @@
         margin-bottom: 30px;
     }
 }
-@media only screen  (min-width: 300px)and (max-width: 1000px){
+@media only screen and (min-width: 300px)and (max-width: 1000px){
     /* For mobile phones: */
     [class*="col-"] {
       width: 100%;
@@ -211,7 +211,6 @@ h1{
 p{
    padding: 40px 5% 40px 5%; 
    color: rgb(1, 49, 59);
-   text-align: justify;
 }
 h2{
     padding-top: 30px;
