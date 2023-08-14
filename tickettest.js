@@ -91,13 +91,12 @@ function updateSummary() {
 
 // Add event listeners
 selectedDateInput.addEventListener("change", updateSummary);
-document.getElementById("duration").addEventListener("change", updateSummary);
-document.getElementById("foreigner-adult").addEventListener("change", updateSummary);
-document.getElementById("foreigner-child").addEventListener("change", updateSummary);
-document.getElementById("sl-adult").addEventListener("change", updateSummary);
-document.getElementById("sl-child").addEventListener("change", updateSummary);
-document.getElementById("infant").addEventListener("change", updateSummary);
-
+document.getElementById("foreigner-adult").addEventListener("click", updateSummary);
+document.getElementById("foreigner-child").addEventListener("click", updateSummary);
+document.getElementById("sl-adult").addEventListener("click", updateSummary);
+document.getElementById("sl-child").addEventListener("click", updateSummary);
+document.getElementById("infant").addEventListener("click", updateSummary);
+document.getElementById("duration").addEventListener("click", updateSummary);
 
 continueButton.addEventListener("click", function() {
   window.location.href = "detailstest.html";
